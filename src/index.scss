@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import '../node_modules/react-md/src/scss/react-md';
+
+$md-primary-color: $md-blue-900;
+$md-secondary-color: $md-yellow-a-400;
+
+@include react-md-everything;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.loss {
+  background: $md-red-300;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+}
+
+.draw {
+  background: $md-amber-300;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+}
+
+.win {
+  background: $md-green-300;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+}
+
+.md-tile-text--primary {
+  font-size: 1.2rem;
+}
+
+.md-pointer--hover:hover{
+  cursor: default;
+}
+
+.md-avatar-content {
+  font-size: 1.2rem;
+}
+
+.md-paper {
+  margin-bottom: 10px;
+}
