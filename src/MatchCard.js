@@ -22,24 +22,24 @@ function MatchCard() {
                 <CardText>
                     <div className="md-text-center">
                         <h1>{fixture.opponent}</h1>
-                        <h3><MatchResult result={fixture.result} /></h3>
+                        <MatchResult result={fixture.result} />
                         <h1>{fixture.finalScore}</h1>
                         <Divider inset/>
                     </div>
                 </CardText>
                 <CardActions expander />
                 <CardText expandable>
-                <div className="md-grid md-text-center">
-                        <h6 className="md-cell--12">Goalscorers</h6>
-                        <GoalscorerList scorers={fixture.lscorers} textAlign={"right"} />
-                        <GoalscorerList scorers={fixture.oscorers} textAlign={"left"} />
-                </div>
-                <div className="md-text-center">
-                        <h6>Attendance: {fixture.attendance}</h6>
-                        <h6>Referee: {fixture.referee}</h6>
-                        <Divider inset/>
-                </div>
-                <div className="md-grid md-text-center">
+                    <div className="md-grid md-text-center">
+                            <h6 className="md-cell--12">Goalscorers</h6>
+                            <GoalscorerList scorers={fixture.lscorers} textAlign={"right"} />
+                            <GoalscorerList scorers={fixture.oscorers} textAlign={"left"} />
+                    </div>
+                    <div className="md-text-center">
+                            <h6>Attendance: {fixture.attendance}</h6>
+                            <h6>Referee: {fixture.referee}</h6>
+                            <Divider inset/>
+                    </div>
+                    <div className="md-grid md-text-center">
                         <h6 className="md-cell--12">Teams</h6>
                         <LeicesterTeamList 
                             players={fixture.lteam} 
@@ -49,6 +49,7 @@ function MatchCard() {
                             players={fixture.oteam} 
                             textAlign={"left"} 
                             avatarColor={fixture.opponentColourString} />
+                        <Divider />
                         <h6 className="md-cell--12">Substitutes</h6>
                         <LeicesterTeamList 
                             players={fixture.lsubs} 
@@ -58,6 +59,7 @@ function MatchCard() {
                             players={fixture.osubs} 
                             textAlign={"left"} 
                             avatarColor={fixture.opponentColourString} />
+                        <Divider />
                         <h6 className="md-cell--12">Discipline</h6>
                         <LeicesterTeamList 
                             players={fixture.lyellowcards} 
@@ -73,7 +75,7 @@ function MatchCard() {
                             possession={fixture.possession} 
                             colours={[fixture.leicesterColour, fixture.opponentColour]} 
                             opponent={fixture.opponent} />
-                </div>
+                    </div>
                 </CardText>
             </Card>)}
         </div>
