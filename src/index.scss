@@ -12,24 +12,22 @@ body {
 }
 
 .loss {
-  background: $md-red-300;
-  border-radius: 50%;
+  color: $md-red-a-200;
+  background: $md-grey-200;
+  border: 1px solid $md-grey-300;
+  border-radius: 3px;
   padding: 10px;
-  color: white;
+  font-weight: 500;
 }
 
 .draw {
-  background: $md-amber-300;
-  border-radius: 50%;
-  padding: 10px;
-  color: white;
+  color: $md-amber-a-700;
+  @extend .loss;
 }
 
 .win {
-  background: $md-green-300;
-  border-radius: 50%;
-  padding: 10px;
-  color: white;
+  color: $md-green-a-200;
+  @extend .loss;
 }
 
 .md-tile-text--primary {
