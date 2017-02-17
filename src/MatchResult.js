@@ -6,12 +6,14 @@ const MatchResultProps = {
 
 function MatchResult({result}) { 
     return (
-        <span className={
-            (result === 'L') ? "loss" : 
-            (result === 'D') ? "draw" : "win"
-            }>
-            {result}
-        </span>
+        <h3>
+            <span className={
+                (result === 'L') ? "loss" : 
+                (result === 'D') ? "draw" : "win"
+                }>
+                {result}
+            </span>
+        </h3>
     )
 }
 
