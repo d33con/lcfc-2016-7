@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import List from 'react-md/lib/Lists/List';
 import ListItem from 'react-md/lib/Lists/ListItem';
@@ -9,8 +9,12 @@ import squad from './data/squad';
 
 const getLeicesterPlayerName = (squad, number) => squad.find(x => x.number === number).name;
 
-const YellowCards = props => {
-  let { players, textAlign } = props;
+const YellowCardsProps = {
+  players: React.PropTypes.array.isRequired,
+  textAlign: React.PropTypes.string.isRequired
+};
+
+function YellowCards ({players, textAlign}) {
   return (
     <div>
     <List className={"md-cell--6 md-text-" + textAlign}>
@@ -22,10 +26,6 @@ const YellowCards = props => {
   )
 }
 
-
-YellowCards.propTypes = {
-  players: PropTypes.array,
-  textAlign: PropTypes.string
-};
+YellowCards.propTypes = YellowCardsProps;
 
 export default YellowCards;
